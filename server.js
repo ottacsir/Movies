@@ -63,3 +63,22 @@ const server = http.createServer((req, res) => {
             }
         });
     }
+
+    // DELETE
+    else if (req.method === 'DELETE' && req.url.startsWith('/movies/')) {
+        const id = parseInt(req.url.split('/')[2]);
+        let movies = readData();
+        movies = movies.filter(m => m.id !== id);
+        writeData(movies);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ message: "Deleted successfully" }));
+    }
+    else {
+        res.writeHead(404);
+        res.end("Route not found");
+    }
+});
+
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
