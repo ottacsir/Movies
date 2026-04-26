@@ -42,4 +42,24 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    
+    // PUT
+    else if (req.method === 'PUT' && req.url.startsWith('/movies/')) {
+        const id = parseInt(req.url.split('/')[2]);
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            const updatedData = JSON.parse(body);
+            const movies = readData();
+            const index = movies.findIndex(m => m.id === id);
+            if (index !== -1) {
+                movies[index] = { ...movies[index], ...updatedData };
+                writeData(movies);
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify(movies[index]));
+            } else {
+                res.end(JSON.stringify({ message: "Movie not found" }));
+            }
+        });
+    }
