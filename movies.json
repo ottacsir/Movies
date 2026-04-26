@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "White Chicks",
+    "genre": "Comedy/Crime",
+    "overview": "Two disgraced FBI agents are assigned a new case where they must protect two cruise line heiresses from getting abducted."
+  },
+  {
+    "id": 2,
+    "title": "Fast Five",
+    "genre": "Action/Crime",
+    "overview": "Fast Five is the fifth installment in The Fast and The Furious franchise. The film switches from car racing the chase sequences to a more standard crime thriller plot."
+  },
+  {
+    "id": 3,
+    "title": "Hidden Figures",
+    "genre": "Drama/History",
+    "overview": "Three female African-American mathematicians play a pivotal role in astronaut John Glenn's launch to orbit. Meanwhile, they also have to deal with racial and gender discrimination at work."
+  },
+  {
+    "id": 4,
+    "title": "Catch Me If You Can",
+    "genre": "Crime/Comedy",
+    "overview": "Frank Abagnale Jr is a con man who poses as a pilot, doctor and lawyer and cashes forged cheques wort millions before his 21st birthday, despite being constantly chased by FBI agent Carl Hanratty."
+  },
+  {
+    "id": 5,
+    "title": "Inception",
+    "genre": "Sci-fi/Action",
+    "overview": "Cobb steals information from his targets by entering their dreams. he is wanted for his alleged role in his wife's murder and his only chance at redemption is to perform a nearly impossible task."
+  },
+  {
+    "id": 6,
+    "title": "Just Go With It",
+    "genre": "Comedy/Romance",
+    "overview": "A plastic surgeon convinces his assistant to join him along with his young girlfriend on a trip to Hawaii and pose as his ex-wife to cover up a lie, but he ends up complicating the situation further."
+  },
+  {
+    "id": 7,
+    "title": "Grown Ups",
+    "genre": "Comedy/Drama",
+    "overview": "When five highschool friends reunite for their coach's funeral, they decide to take a trip to the lake house where they celebrated their last win and are challenged by their rivals to another match."
+  }
+]
