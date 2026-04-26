@@ -25,4 +25,21 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(movie || { message: "Not found" }));
     }
 
+    // POST
+    else if (req.method === 'POST' && req.url === '/movies') {
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            const newMovie = JSON.parse(body);
+            const movies = readData();
+            newMovie.id = movies.length ? movies[movies.length - 1].id + 1 : 1;
+            movies.push(newMovie);
+            writeData(movies);
+            res.writeHead(201, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify(newMovie));
+        });
+    }
+
     
